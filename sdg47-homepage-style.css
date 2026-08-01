@@ -1,0 +1,3288 @@
+:root {
+  --font-family-var: "Roboto-Bold", Helvetica, sans-serif;
+  --border-var: 1px solid rgba(0, 0, 0, 0);
+  --padding-block-inline-var: 5px 5px;
+  --margin-top-left-bottom-right-var: 5px 5px 5px 5px;
+  --transition-hover-time: 500ms;
+}
+
+@font-face {
+  font-family: var(--font-family-var);
+  src: local("Roboto/Roboto-Bold.woff2") url("Roboto/Roboto-Bold.woff2")
+    format("woff2");
+  font-weight: normal, bold;
+  font-style: normal;
+  font-display: swap;
+  font-variant: normal;
+}
+
+* {
+  font-family: var(--font-family-var);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+  width: 100vw;
+  height: 500vh;
+  overflow: hidden visible;
+  padding: 0;
+  margin: 0;
+  transition: background-color 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.background-img-container {
+  background: rgba(0, 0, 0, 0);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: none;
+  padding: 0px 0px;
+  margin: 0px 0px 0px 0px;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.background-img {
+  background: rgba(0, 0, 0, 0);
+  filter: grayscale(1%) brightness(85%) blur(1px) contrast(105%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: none;
+  padding: 0px 0px;
+  margin: 0px 0px 0px 0px;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.background-img[alt="Hintergrund Bild"] {
+  background: rgba(0, 0, 0, 0);
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0);
+  text-shadow: none;
+  text-decoration: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.homepage-welcome-title-container {
+  background: linear-gradient(
+    12deg,
+    rgba(0, 247, 255, 0.5) 40%,
+    rgba(119, 0, 255, 0.5) 75%
+  );
+  -webkit-backdrop-filter: grayscale(1%) brightness(90%) blur(5px)
+    contrast(105%);
+  backdrop-filter: grayscale(1%) brightness(90%) blur(5px) contrast(105%);
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 900px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 25px;
+  padding: 1.25px 1.25px;
+  margin: 6.25px 6.25px 6.25px 6.25px;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.homepage-welcome-title-h-one {
+  background: rgba(0, 0, 0, 0);
+  overflow: hidden;
+  width: 850px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: var(--border-var);
+  padding: var(--padding-block-inline-var);
+  margin: var(--margin-top-left-bottom-right-var);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
+  font-size: 45px;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
+  text-decoration: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.homepage-welcome-name-title-h-two {
+  background: rgba(0, 0, 0, 0);
+  overflow: hidden;
+  width: 400px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: var(--border-var);
+  padding: var(--padding-block-inline-var);
+  margin: var(--margin-top-left-bottom-right-var);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
+  font-size: 40px;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
+  text-decoration: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.twitch-embed-player-container {
+  background: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1500px;
+  height: 700px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: var(--border-var);
+  padding: var(--padding-block-inline-var);
+  margin: var(--margin-top-left-bottom-right-var);
+}
+
+.twitch-embed-player {
+  background: rgba(0, 0, 0, 0);
+  width: 1480px;
+  height: 680px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: 2px solid rgb(115, 15, 195);
+  border-radius: 25px;
+  padding: 0px 0px;
+  margin: 6.25px 6.25px 6.25px 6.25px;
+}
+
+.youtube-player-container {
+  background: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 152%;
+  left: 22%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: var(--border-var);
+  padding: var(--padding-block-inline-var);
+  margin: var(--margin-top-left-bottom-right-var);
+}
+
+.youtube-player {
+  background: rgba(0, 0, 0, 0);
+  width: 800px;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: 2px solid rgb(143, 42, 17);
+  border-radius: 15px;
+  padding: 0px 0px;
+  margin: 3.75px 3.75px 3.75px 3.75px;
+}
+
+.youtube-info-main-container {
+  background: linear-gradient(
+    47.5deg,
+    rgba(0, 247, 255, 0.5) 40%,
+    rgba(119, 0, 255, 0.5) 75%
+  );
+  position: absolute;
+  top: 152%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  width: 670px;
+  height: 750px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 25px;
+  padding: 1.25px 1.25px;
+  margin: 6.25px 6.25px 6.25px 6.25px;
+  cursor: default;
+}
+
+.youtube-link-a {
+  background: rgba(0, 0, 0, 0);
+  filter: brightness(100%);
+  width: 450px;
+  height: 350px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: var(--border-var);
+  padding: var(--padding-block-inline-var);
+  margin: var(--margin-top-left-bottom-right-var);
+  text-decoration: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.youtube-link-a::after {
+  content: "";
+  background-color: rgb(143, 42, 17);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: center;
+  border-radius: 25px;
+  transition: transform var(--transition-hover-time)
+    cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.youtube-link-a:hover::after {
+  transform: scaleX(1);
+}
+
+.youtube-link-a:active {
+  filter: brightness(80%);
+}
+
+.youtube-link-title-h-one {
+  background: rgba(0, 0, 0, 0);
+  width: 400px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: var(--border-var);
+  padding: var(--padding-block-inline-var);
+  margin: var(--margin-top-left-bottom-right-var);
+  text-align: center;
+  font-size: 35px;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
+  text-decoration: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.youtube-link-img {
+  background: rgba(0, 0, 0, 0);
+  filter: grayscale(100%);
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: 2px solid rgb(143, 42, 17);
+  border-radius: 15px;
+  padding: 0px 0px;
+  margin: 3.75px 3.75px 3.75px 3.75px;
+  transition: filter var(--transition-hover-time)
+    cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.youtube-link-img[alt="Shiml_der_Gamer47 Youtube Channel"] {
+  background: rgba(0, 0, 0, 0);
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0);
+  text-decoration: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.youtube-link-a:hover .youtube-link-img {
+  filter: grayscale(0%);
+}
+
+.youtube-info-paragraphs-container {
+  background: rgba(0, 0, 0, 0);
+  width: 630px;
+  height: 340px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: var(--border-var);
+  padding: var(--padding-block-inline-var);
+  margin: var(--margin-top-left-bottom-right-var);
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.youtube-info-paragraphs {
+  background: rgba(0, 0, 0, 0);
+  width: 610px;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: var(--border-var);
+  padding: var(--padding-block-inline-var);
+  margin: var(--margin-top-left-bottom-right-var);
+  text-align: center;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
+  text-decoration: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.discord-img-link-container {
+  background: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 230%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  width: 640px;
+  height: 440px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: var(--border-var);
+  padding: var(--padding-block-inline-var);
+  margin: var(--margin-top-left-bottom-right-var);
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+.discord-link-a {
+  background: rgba(0, 0, 0, 0);
+  filter: brightness(100%);
+  position: relative;
+  width: 620px;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: var(--border-var);
+  padding: var(--padding-block-inline-var);
+  margin: var(--margin-top-left-bottom-right-var);
+  text-decoration: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.discord-link-a::after {
+  content: "";
+  background-color: rgb(0, 120, 200);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  transform-origin: center;
+  transform: scaleX(0);
+  border-radius: 25px;
+  transition: transform 500ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.discord-link-a:hover::after {
+  transform: scaleX(1);
+}
+
+.discord-link-a:active {
+  filter: brightness(80%);
+}
+
+.discord-img {
+  background: rgba(0, 0, 0, 0);
+  filter: grayscale(100%);
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: 2px solid rgb(0, 120, 200);
+  border-radius: 15px;
+  padding: 0px 0px;
+  margin: 3.75px 3.75px 3.75px 3.75px;
+  transition: filter 500ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.discord-img[alt="Shiml_der_Gamer47 Community Server"] {
+  background: rgba(0, 0, 0, 0);
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0);
+  text-decoration: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.discord-link-a:hover .discord-img {
+  filter: grayscale(0%);
+}
+
+.discord-h-one-p-container {
+  background: linear-gradient(
+    30deg,
+    rgba(0, 247, 255, 0.5) 40%,
+    rgba(119, 0, 255, 0.5) 75%
+  );
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  position: absolute;
+  top: 230%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 25px;
+  padding: 1.25px 1.25px;
+  margin: 6.25px 6.25px 6.25px 6.25px;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.discord-title-h-one-container {
+  background: rgba(0, 0, 0, 0);
+  width: 490px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: var(--border-var);
+  padding: var(--padding-block-inline-var);
+  margin: var(--margin-top-left-bottom-right-var);
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.discord-title-h-one {
+  background: rgba(0, 0, 0, 0);
+  width: 470px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: var(--border-var);
+  padding: var(--padding-block-inline-var);
+  margin: var(--margin-top-left-bottom-right-var);
+  text-align: center;
+  font-size: 45px;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
+  text-decoration: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.discord-text-paragraphs-container {
+  background: rgba(0, 0, 0, 0);
+  width: 540px;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: var(--border-var);
+  padding: var(--padding-block-inline-var);
+  margin: var(--margin-top-left-bottom-right-var);
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.discord-text-paragraphs {
+  background: rgba(0, 0, 0, 0);
+  width: 520px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: var(--border-var);
+  padding: var(--padding-block-inline-var);
+  margin: var(--margin-top-left-bottom-right-var);
+  text-align: center;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
+  text-decoration: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.twitter-img-link-container {
+  background: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 300%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  width: 640px;
+  height: 440px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: var(--border-var);
+  padding: var(--padding-block-inline-var);
+  margin: var(--margin-top-left-bottom-right-var);
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+.twitter-link-a {
+  background: rgba(0, 0, 0, 0);
+  filter: brightness(100%);
+  position: relative;
+  width: 620px;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: var(--border-var);
+  padding: var(--padding-block-inline-var);
+  margin: var(--margin-top-left-bottom-right-var);
+  text-decoration: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.twitter-link-a::after {
+  content: "";
+  background-color: rgb(130, 0, 255);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  transform-origin: center;
+  transform: scaleX(0);
+  border-radius: 25px;
+  transition: transform 500ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.twitter-link-a:hover::after {
+  transform: scaleX(1);
+}
+
+.twitter-link-a:active {
+  filter: brightness(80%);
+}
+
+.twitter-img {
+  background: rgba(0, 0, 0, 0);
+  filter: grayscale(100%);
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: 2px solid rgb(130, 0, 255);
+  border-radius: 15px;
+  padding: 0px 0px;
+  margin: 3.75px 3.75px 3.75px 3.75px;
+  transition: filter 500ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.twitter-img[alt="Shiml_der_Gamer47 Twitter Channel"] {
+  background: rgba(0, 0, 0, 0);
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0);
+  text-decoration: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.twitter-link-a:hover .twitter-img {
+  filter: grayscale(0%);
+}
+
+.twitter-h-one-p-container {
+  background: linear-gradient(
+    30deg,
+    rgba(0, 247, 255, 0.5) 40%,
+    rgba(119, 0, 255, 0.5) 75%
+  );
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  position: absolute;
+  top: 300%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 25px;
+  padding: 1.25px 1.25px;
+  margin: 6.25px 6.25px 6.25px 6.25px;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.twitter-h-one-container {
+  background: rgba(0, 0, 0, 0);
+  width: 500px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: var(--border-var);
+  padding: var(--padding-block-inline-var);
+  margin: var(--margin-top-left-bottom-right-var);
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.twitter-h-one {
+  background: rgba(0, 0, 0, 0);
+  width: 480px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: var(--border-var);
+  padding: var(--padding-block-inline-var);
+  margin: var(--margin-top-left-bottom-right-var);
+  text-align: center;
+  font-size: 45px;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
+  text-decoration: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.twitter-paragraphs-container {
+  background: rgba(0, 0, 0, 0);
+  width: 520px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: var(--border-var);
+  padding: var(--padding-block-inline-var);
+  margin: var(--margin-top-left-bottom-right-var);
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.twitter-paragraphs {
+  background: rgba(0, 0, 0, 0);
+  width: 500px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: var(--border-var);
+  padding: var(--padding-block-inline-var);
+  margin: var(--margin-top-left-bottom-right-var);
+  text-align: center;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
+  text-decoration: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.instagram-img-link-container {
+  background: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 360%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  width: 640px;
+  height: 440px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: var(--border-var);
+  padding: var(--padding-block-inline-var);
+  margin: var(--margin-top-left-bottom-right-var);
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+.instagram-link-a {
+  background: rgba(0, 0, 0, 0);
+  filter: brightness(100%);
+  position: relative;
+  width: 620px;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: var(--border-var);
+  padding: var(--padding-block-inline-var);
+  margin: var(--margin-top-left-bottom-right-var);
+  text-decoration: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.instagram-link-a::after {
+  content: "";
+  background-color: rgb(200, 0, 255);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  transform-origin: center;
+  transform: scaleX(0);
+  border-radius: 25px;
+  transition: transform 500ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.instagram-link-a:hover::after {
+  transform: scaleX(1);
+}
+
+.instagram-img {
+  background: rgba(0, 0, 0, 0);
+  filter: grayscale(100%);
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: 2px solid rgb(200, 0, 255);
+  border-radius: 15px;
+  padding: 0px 0px;
+  margin: 3.75px 3.75px 3.75px 3.75px;
+  transition: filter 500ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.instagram-img[alt="Shiml_der_Gamer47 Instagram Account"] {
+  background: rgba(0, 0, 0, 0);
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0);
+  text-decoration: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.instagram-link-a:hover .instagram-img {
+  filter: grayscale(0%);
+}
+
+.instagram-h-one-p-container {
+  background: linear-gradient(
+    30deg,
+    rgba(0, 247, 255, 0.5) 40%,
+    rgba(119, 0, 255, 0.5) 75%
+  );
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  position: absolute;
+  top: 360%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  width: 550px;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 25px;
+  padding: 1.25px 1.25px;
+  margin: 6.25px 6.25px 6.25px 6.25px;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.instagram-h-one-container {
+  background: rgba(0, 0, 0, 0);
+  width: 500px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: var(--border-var);
+  padding: var(--padding-block-inline-var);
+  margin: var(--margin-top-left-bottom-right-var);
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.instagram-h-one {
+  background: rgba(0, 0, 0, 0);
+  width: 480px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: var(--border-var);
+  padding: var(--padding-block-inline-var);
+  margin: var(--margin-top-left-bottom-right-var);
+  text-align: center;
+  font-size: 45px;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
+  text-decoration: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.instagram-paragraphs-container {
+  background: rgba(0, 0, 0, 0);
+  width: 500px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: var(--border-var);
+  padding: var(--padding-block-inline-var);
+  margin: var(--margin-top-left-bottom-right-var);
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.instagram-paragraphs {
+  background: rgba(0, 0, 0, 0);
+  width: 480px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: var(--border-var);
+  padding: var(--padding-block-inline-var);
+  margin: var(--margin-top-left-bottom-right-var);
+  text-align: center;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
+  text-decoration: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.spotify-img-link-container {
+  background: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 430%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  width: 640px;
+  height: 440px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: var(--border-var);
+  padding: var(--padding-block-inline-var);
+  margin: var(--margin-top-left-bottom-right-var);
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+.spotify-link-a {
+  background: rgba(0, 0, 0, 0);
+  filter: brightness(100%);
+  position: relative;
+  width: 620px;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: var(--border-var);
+  padding: var(--padding-block-inline-var);
+  margin: var(--margin-top-left-bottom-right-var);
+  text-decoration: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.spotify-link-a::after {
+  content: "";
+  background-color: rgb(0, 155, 0);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  transform-origin: center;
+  transform: scaleX(0);
+  border-radius: 25px;
+  transition: transform 500ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.spotify-link-a:hover::after {
+  transform: scaleX(1);
+}
+
+.spotify-link-a:active {
+  filter: brightness(80%);
+}
+
+.spotify-img {
+  background: rgba(0, 0, 0, 0);
+  filter: grayscale(100%);
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: 2px solid rgb(0, 155, 0);
+  border-radius: 15px;
+  padding: 0px 0px;
+  margin: 3.75px 3.75px 3.75px 3.75px;
+  transition: filter 500ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.spotify-link-a:hover .spotify-img {
+  filter: grayscale(0%);
+}
+
+.spotify-h-one-p-container {
+  background: linear-gradient(
+    30deg,
+    rgba(0, 247, 255, 0.5) 40%,
+    rgba(119, 0, 255, 0.5) 75%
+  );
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  position: absolute;
+  top: 430%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 25px;
+  padding: 1.25px 1.25px;
+  margin: 6.25px 6.25px 6.25px 6.25px;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.spotify-h-one-container {
+  background: rgba(0, 0, 0, 0);
+  width: 500px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: var(--border-var);
+  padding: var(--padding-block-inline-var);
+  margin: var(--margin-top-left-bottom-right-var);
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.spotify-h-one {
+  background: rgba(0, 0, 0, 0);
+  width: 480px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: var(--border-var);
+  padding: var(--padding-block-inline-var);
+  margin: var(--margin-top-left-bottom-right-var);
+  text-align: center;
+  font-size: 45px;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
+  text-decoration: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.spotify-paragraphs-container {
+  background: rgba(0, 0, 0, 0);
+  width: 520px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: var(--border-var);
+  padding: var(--padding-block-inline-var);
+  margin: var(--margin-top-left-bottom-right-var);
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.spotify-paragraphs {
+  background: rgba(0, 0, 0, 0);
+  width: 500px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: var(--border-var);
+  padding: var(--padding-block-inline-var);
+  margin: var(--margin-top-left-bottom-right-var);
+  text-align: center;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
+  text-decoration: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.rest-social-media-container {
+  background: linear-gradient(
+    30deg,
+    rgba(0, 247, 255, 0.5) 40%,
+    rgba(119, 0, 255, 0.5) 75%
+  );
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  position: absolute;
+  top: 482%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.89);
+  width: 2100px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  justify-content: space-around;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 25px;
+  padding: 1.25px 1.25px;
+  margin: 6.25px 6.25px 6.25px 6.25px;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.threads-link-img-h-one-container {
+  background: rgba(0, 0, 0, 0);
+  width: 670px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: var(--border-var);
+  padding: var(--padding-block-inline-var);
+  margin: var(--margin-top-left-bottom-right-var);
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+.threads-link-a {
+  background: rgba(0, 0, 0, 0);
+  filter: brightness(100%);
+  position: relative;
+  width: 650px;
+  height: 230px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: var(--border-var);
+  padding: var(--padding-block-inline-var);
+  margin: var(--margin-top-left-bottom-right-var);
+  text-decoration: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.threads-link-a::after {
+  content: "";
+  background-color: rgb(170, 0, 255);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  transform-origin: center;
+  transform: scaleX(0);
+  border-radius: 25px;
+  transition: transform 500ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.threads-link-a:hover::after {
+  transform: scaleX(1);
+}
+
+.threads-link-a:active {
+  filter: brightness(80%);
+}
+
+.threads-img {
+  background: rgba(0, 0, 0, 0);
+  filter: grayscale(100%);
+  width: 200px;
+  max-width: 200px;
+  height: 200px;
+  max-height: 200px;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: 2px solid rgb(170, 0, 255);
+  border-radius: 50%;
+  padding: 0px 0px;
+  margin: 25px 25px 25px 25px;
+  transition: filter 500ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.threads-img[alt="Shiml_der_Gamer47 Threads Channel"] {
+  background: rgba(0, 0, 0, 0);
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0);
+  text-decoration: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.threads-link-a:hover .threads-img {
+  filter: grayscale(0%);
+}
+
+.threads-h-one {
+  background: rgba(0, 0, 0, 0);
+  width: 370px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: var(--border-var);
+  padding: var(--padding-block-inline-var);
+  margin: var(--margin-top-left-bottom-right-var);
+  text-align: center;
+  font-size: 35px;
+  color: rgb(128, 128, 128);
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
+  text-decoration: none;
+  transition: color 500ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.threads-link-a:hover .threads-h-one {
+  color: rgb(255, 255, 255);
+}
+
+.reddit-a-img-h-one-container {
+  background: rgba(0, 0, 0, 0);
+  width: 670px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: var(--border-var);
+  padding: var(--padding-block-inline-var);
+  margin: var(--margin-top-left-bottom-right-var);
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+.reddit-link-a {
+  background: rgba(0, 0, 0, 0);
+  filter: brightness(100%);
+  position: relative;
+  width: 650px;
+  height: 230px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: var(--border-var);
+  padding: var(--padding-block-inline-var);
+  margin: var(--margin-top-left-bottom-right-var);
+  text-decoration: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.reddit-link-a::after {
+  content: "";
+  background-color: rgb(255, 166, 0);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  transform-origin: center;
+  transform: scaleX(0);
+  border-radius: 25px;
+  transition: transform 500ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.reddit-link-a:hover::after {
+  transform: scaleX(1);
+}
+
+.reddit-link-a:active {
+  filter: brightness(80%);
+}
+
+.reddit-img {
+  background: rgba(0, 0, 0, 0);
+  filter: grayscale(100%);
+  width: 200px;
+  max-width: 200px;
+  height: 200px;
+  max-height: 200px;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: 2px solid rgb(255, 166, 0);
+  border-radius: 50%;
+  padding: 0px 0px;
+  margin: 25px 25px 25px 25px;
+  transition: filter var(--transition-hover-time)
+    cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.reddit-img[alt="Shiml_der_Gamer47 Reddit Channel"] {
+  background: rgba(0, 0, 0, 0);
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0);
+  text-decoration: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.reddit-link-a:hover .reddit-img {
+  filter: grayscale(0%);
+}
+
+.reddit-h-one {
+  background: rgba(0, 0, 0, 0);
+  width: 370px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: var(--border-var);
+  padding: var(--padding-block-inline-var);
+  margin: var(--margin-top-left-bottom-right-var);
+  text-align: center;
+  font-size: 35px;
+  color: rgb(128, 128, 128);
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
+  text-decoration: none;
+  transition: color 500ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.reddit-link-a:hover .reddit-h-one {
+  color: rgb(255, 255, 255);
+}
+
+.fb-link-img-h-one-container {
+  background: rgba(0, 0, 0, 0);
+  width: 670px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: var(--border-var);
+  padding: var(--padding-block-inline-var);
+  margin: var(--margin-top-left-bottom-right-var);
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+.fb-link-a {
+  background: rgba(0, 0, 0, 0);
+  filter: brightness(100%);
+  position: relative;
+  width: 650px;
+  height: 230px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: var(--border-var);
+  padding: var(--padding-block-inline-var);
+  margin: var(--margin-top-left-bottom-right-var);
+  text-decoration: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.fb-link-a::after {
+  content: "";
+  background-color: rgb(10, 75, 175);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  transform-origin: center;
+  transform: scaleX(0);
+  border-radius: 25px;
+  transition: transform 500ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.fb-link-a:hover::after {
+  transform: scaleX(1);
+}
+
+.fb-link-a:active {
+  filter: brightness(80%);
+}
+
+.fb-img {
+  background: rgba(0, 0, 0, 0);
+  filter: grayscale(100%);
+  width: 200px;
+  max-width: 200px;
+  height: 200px;
+  max-height: 200px;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: 2px solid rgb(10, 75, 175);
+  border-radius: 50%;
+  padding: 0px 0px;
+  margin: 25px 25px 25px 25px;
+  transition: filter 500ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.fb-img[alt="Shiml_der_Gamer47 Facebook Channel"] {
+  background: rgba(0, 0, 0, 0);
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0);
+  text-decoration: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.fb-link-a:hover .fb-img {
+  filter: grayscale(0%);
+}
+
+.fb-h-one {
+  background: rgba(0, 0, 0, 0);
+  width: 370px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  border: var(--border-var);
+  padding: var(--padding-block-inline-var);
+  margin: var(--margin-top-left-bottom-right-var);
+  text-align: center;
+  font-size: 35px;
+  color: rgb(128, 128, 128);
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
+  text-decoration: none;
+  transition: color var(--transition-hover-time)
+    cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.fb-link-a:hover .fb-h-one {
+  color: rgb(255, 255, 255);
+}
+
+/* Alte/kleine Phones: 320–359px (iPhone SE, alte Budget-Phones) */
+@media only screen and (min-width: 320px) and (max-width: 359px) and (orientation: portrait) {
+  body {
+    width: 100vw;
+    height: 475vh;
+    transition:
+      width 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      height 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .background-img-container {
+    width: 100%;
+    height: 100%;
+    transition:
+      width 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      height 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .background-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition:
+      width 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      height 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .homepage-welcome-title-container {
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.3);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .twitch-embed-player-container {
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    width: 700px;
+    height: 1200px;
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      width 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      height 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .twitch-embed-player {
+    width: 680px;
+    height: 1000px;
+    transition:
+      width 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      height 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .youtube-player-container {
+    top: 155%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.35);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .youtube-info-main-container {
+    top: 108%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .discord-img-link-container {
+    top: 188%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .discord-h-one-p-container {
+    top: 220%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .twitter-img-link-container {
+    top: 254%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .twitter-h-one-p-container {
+    top: 280%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .instagram-img-link-container {
+    top: 308%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .instagram-h-one-p-container {
+    top: 340%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .spotify-img-link-container {
+    top: 372%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .spotify-h-one-p-container {
+    top: 402%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .rest-social-media-container {
+    top: 445%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.3);
+    width: 800px;
+    height: 1000px;
+    flex-direction: column;
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+}
+
+/* Kompakt-Phones: 360–389px (Galaxy S24, Pixel 8) */
+@media only screen and (min-width: 360px) and (max-width: 389px) and (orientation: portrait) {
+  body {
+    width: 100vw;
+    height: 475vh;
+    transition:
+      width 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      height 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .background-img-container {
+    width: 100%;
+    height: 100%;
+    transition:
+      width 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      height 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .background-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition:
+      width 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      height 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .homepage-welcome-title-container {
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.3);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .twitch-embed-player-container {
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    width: 700px;
+    height: 1200px;
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      width 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      height 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .twitch-embed-player {
+    width: 680px;
+    height: 1000px;
+    transition:
+      width 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      height 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .youtube-player-container {
+    top: 155%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.35);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .youtube-info-main-container {
+    top: 108%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .discord-img-link-container {
+    top: 188%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .discord-h-one-p-container {
+    top: 220%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .twitter-img-link-container {
+    top: 254%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .twitter-h-one-p-container {
+    top: 280%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .instagram-img-link-container {
+    top: 308%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .instagram-h-one-p-container {
+    top: 340%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .spotify-img-link-container {
+    top: 372%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .spotify-h-one-p-container {
+    top: 402%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .rest-social-media-container {
+    top: 445%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.3);
+    width: 800px;
+    height: 1000px;
+    flex-direction: column;
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+}
+
+/* Standard-Phones: 390–427px (iPhone 16/17, Pixel 9) */
+@media only screen and (min-width: 390px) and (max-width: 427px) and (orientation: portrait) {
+  body {
+    width: 100vw;
+    height: 475vh;
+    transition:
+      width 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      height 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .background-img-container {
+    width: 100%;
+    height: 100%;
+    transition:
+      width 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      height 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .background-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition:
+      width 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      height 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .homepage-welcome-title-container {
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.3);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .twitch-embed-player-container {
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    width: 700px;
+    height: 1200px;
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      width 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      height 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .twitch-embed-player {
+    width: 680px;
+    height: 1000px;
+    transition:
+      width 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      height 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .youtube-player-container {
+    top: 155%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.35);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .youtube-info-main-container {
+    top: 108%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .discord-img-link-container {
+    top: 188%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .discord-h-one-p-container {
+    top: 220%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .twitter-img-link-container {
+    top: 254%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .twitter-h-one-p-container {
+    top: 280%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .instagram-img-link-container {
+    top: 308%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .instagram-h-one-p-container {
+    top: 340%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .spotify-img-link-container {
+    top: 372%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .spotify-h-one-p-container {
+    top: 402%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .rest-social-media-container {
+    top: 445%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.3);
+    width: 800px;
+    height: 1000px;
+    flex-direction: column;
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+}
+
+/* Grosse Phones/Phablets: 428–599px (Pro Max, Ultra) */
+@media only screen and (min-width: 428px) and (max-width: 599px) and (orientation: portrait) {
+  body {
+    width: 100vw;
+    height: 590vh;
+    transition:
+      width 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      height 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .background-img-container {
+    width: 100%;
+    height: 100%;
+    transition:
+      width 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      height 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .background-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition:
+      width 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      height 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .homepage-welcome-title-container {
+    top: 8%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .twitch-embed-player-container {
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    width: 700px;
+    height: 1200px;
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      width 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      height 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .twitch-embed-player {
+    width: 680px;
+    height: 1000px;
+    transition:
+      width 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      height 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .youtube-player-container {
+    top: 192%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .youtube-info-main-container {
+    top: 133%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .discord-img-link-container {
+    top: 236%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .discord-h-one-p-container {
+    top: 277%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .twitter-img-link-container {
+    top: 318%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .twitter-h-one-p-container {
+    top: 352%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .instagram-img-link-container {
+    top: 385%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .instagram-h-one-p-container {
+    top: 423%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .spotify-img-link-container {
+    top: 462%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .spotify-h-one-p-container {
+    top: 500%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .rest-social-media-container {
+    top: 553%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    width: 800px;
+    height: 1000px;
+    flex-direction: column;
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+}
+
+/* Tablets klein: 600–768px (iPad Mini, Galaxy Tab S9) */
+@media only screen and (min-width: 600px) and (max-width: 768px) and (orientation: portrait) {
+  body {
+    width: 100vw;
+    height: 590vh;
+    transition:
+      width 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      height 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .background-img-container {
+    width: 100%;
+    height: 100%;
+    transition:
+      width 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      height 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .background-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition:
+      width 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      height 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .homepage-welcome-title-container {
+    top: 8%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .twitch-embed-player-container {
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    width: 700px;
+    height: 1200px;
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      width 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      height 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .twitch-embed-player {
+    width: 680px;
+    height: 1000px;
+    transition:
+      width 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      height 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .youtube-player-container {
+    top: 192%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .youtube-info-main-container {
+    top: 133%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .discord-img-link-container {
+    top: 236%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .discord-h-one-p-container {
+    top: 277%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .twitter-img-link-container {
+    top: 318%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .twitter-h-one-p-container {
+    top: 352%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .instagram-img-link-container {
+    top: 385%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .instagram-h-one-p-container {
+    top: 423%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .spotify-img-link-container {
+    top: 462%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .spotify-h-one-p-container {
+    top: 500%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .rest-social-media-container {
+    top: 553%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    width: 800px;
+    height: 1000px;
+    flex-direction: column;
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+}
+
+/* ============ LANDSCAPE (Querformat) ============ */
+
+/* Alte/kleine Phones quer: 480–599px */
+@media only screen and (min-width: 480px) and (max-width: 599px) and (orientation: landscape) {
+  body {
+    width: 100vw;
+    height: 475vh;
+    transition:
+      width 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      height 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .background-img-container {
+    width: 100%;
+    height: 100%;
+    transition:
+      width 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      height 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .background-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition:
+      width 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      height 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .homepage-welcome-title-container {
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.3);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .twitch-embed-player-container {
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    width: 700px;
+    height: 1200px;
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      width 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      height 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .twitch-embed-player {
+    width: 680px;
+    height: 1000px;
+    transition:
+      width 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      height 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .youtube-player-container {
+    top: 155%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.35);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .youtube-info-main-container {
+    top: 108%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .discord-img-link-container {
+    top: 188%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .discord-h-one-p-container {
+    top: 220%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .twitter-img-link-container {
+    top: 254%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .twitter-h-one-p-container {
+    top: 280%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .instagram-img-link-container {
+    top: 308%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .instagram-h-one-p-container {
+    top: 340%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .spotify-img-link-container {
+    top: 372%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .spotify-h-one-p-container {
+    top: 402%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .rest-social-media-container {
+    top: 445%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.3);
+    width: 800px;
+    height: 1000px;
+    flex-direction: column;
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+}
+
+/* Kompakt/Standard-Phones quer: 600–767px */
+@media only screen and (min-width: 600px) and (max-width: 767px) and (orientation: landscape) {
+  body {
+    width: 100vw;
+    height: 475vh;
+    transition:
+      width 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      height 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .background-img-container {
+    width: 100%;
+    height: 100%;
+    transition:
+      width 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      height 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .background-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition:
+      width 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      height 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .homepage-welcome-title-container {
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.3);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .twitch-embed-player-container {
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    width: 700px;
+    height: 1200px;
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      width 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      height 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .twitch-embed-player {
+    width: 680px;
+    height: 1000px;
+    transition:
+      width 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      height 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .youtube-player-container {
+    top: 155%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.35);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .youtube-info-main-container {
+    top: 108%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .discord-img-link-container {
+    top: 188%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .discord-h-one-p-container {
+    top: 220%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .twitter-img-link-container {
+    top: 254%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .twitter-h-one-p-container {
+    top: 280%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .instagram-img-link-container {
+    top: 308%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .instagram-h-one-p-container {
+    top: 340%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .spotify-img-link-container {
+    top: 372%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .spotify-h-one-p-container {
+    top: 402%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .rest-social-media-container {
+    top: 445%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.3);
+    width: 800px;
+    height: 1000px;
+    flex-direction: column;
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+}
+
+/* Grosse Phones quer: 768–959px */
+@media only screen and (min-width: 768px) and (max-width: 959px) and (orientation: landscape) {
+  body {
+    width: 100vw;
+    height: 590vh;
+    transition:
+      width 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      height 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .background-img-container {
+    width: 100%;
+    height: 100%;
+    transition:
+      width 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      height 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .background-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition:
+      width 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      height 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .homepage-welcome-title-container {
+    top: 8%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .twitch-embed-player-container {
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    width: 700px;
+    height: 1200px;
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      width 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      height 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .twitch-embed-player {
+    width: 680px;
+    height: 1000px;
+    transition:
+      width 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      height 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .youtube-player-container {
+    top: 192%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .youtube-info-main-container {
+    top: 133%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .discord-img-link-container {
+    top: 236%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .discord-h-one-p-container {
+    top: 277%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .twitter-img-link-container {
+    top: 318%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .twitter-h-one-p-container {
+    top: 352%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .instagram-img-link-container {
+    top: 385%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .instagram-h-one-p-container {
+    top: 423%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .spotify-img-link-container {
+    top: 462%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .spotify-h-one-p-container {
+    top: 500%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .rest-social-media-container {
+    top: 553%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    width: 800px;
+    height: 1000px;
+    flex-direction: column;
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+}
+
+/* Tablets klein quer: 960–1023px */
+@media only screen and (min-width: 960px) and (max-width: 1023px) and (orientation: landscape) {
+  body {
+    width: 100vw;
+    height: 590vh;
+    transition:
+      width 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      height 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .background-img-container {
+    width: 100%;
+    height: 100%;
+    transition:
+      width 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      height 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .background-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition:
+      width 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      height 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .homepage-welcome-title-container {
+    top: 8%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .twitch-embed-player-container {
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    width: 700px;
+    height: 1200px;
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      width 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      height 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .twitch-embed-player {
+    width: 680px;
+    height: 1000px;
+    transition:
+      width 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      height 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .youtube-player-container {
+    top: 192%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .youtube-info-main-container {
+    top: 133%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .discord-img-link-container {
+    top: 236%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .discord-h-one-p-container {
+    top: 277%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .twitter-img-link-container {
+    top: 318%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .twitter-h-one-p-container {
+    top: 352%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .instagram-img-link-container {
+    top: 385%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .instagram-h-one-p-container {
+    top: 423%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .spotify-img-link-container {
+    top: 462%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .spotify-h-one-p-container {
+    top: 500%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .rest-social-media-container {
+    top: 553%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    width: 800px;
+    height: 1000px;
+    flex-direction: column;
+    transition:
+      top 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      left 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      transform 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+}
